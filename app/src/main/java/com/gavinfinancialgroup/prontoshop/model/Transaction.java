@@ -1,5 +1,9 @@
 package com.gavinfinancialgroup.prontoshop.model;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -100,11 +104,18 @@ public class Transaction {
     }
 
     public List<LineItem> getLineItems() {
+        Gson gson = new Gson();
+        String serializedLineItems = getJsonLineItems();
+        List<LineItem> result = gson.<ArrayList<LineItem>>fromJson(serializedLineItems,
+                new TypeToken<ArrayList<LineItem>>(){}.getType());
         return lineItems;
     }
 
     public void setLineItems(List<LineItem> lineItems) {
-        this.lineItems = lineItems;
+        Gson gson = new Gson();
+        String lineItemJson = gson.toJson(lineItems);
+        this.setJsonLineItems(lineItemJson);
+        //this.lineItems = lineItems;    no longer needed because it has been replaced by the line above
     }
 
     public String getJsonLineItems() {
