@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
+        android:paddingLeft="@dimen/margin_padding_tiny"
+        android:paddingRight="@dimen/margin_padding_tiny"
         android:orientation="vertical">
 
         <TextView
@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center"
-            android:padding="15dp"
+            android:padding="@dimen/margin_padding_normal"
             android:text="@string/no_cart_item_found"
             android:textColor="@color/colorPrimary"
             android:textStyle="italic"
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="right"
-                android:paddingRight="5dp"
+                android:paddingRight="@dimen/margin_padding_xtiny"
                 android:text="@string/label_sub_total"/>
             <TextView
                 android:id="@+id/text_view_sub_total"
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="right"
-                android:paddingRight="5dp"
+                android:paddingRight="@dimen/margin_padding_xtiny"
                 android:text="@string/label_sub_tax"/>
             <TextView
                 android:id="@+id/text_view_tax"
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="right"
-                android:paddingRight="5dp"
+                android:paddingRight="@dimen/margin_padding_xtiny"
                 android:text="@string/label_total"/>
             <TextView
                 android:id="@+id/text_view_total"

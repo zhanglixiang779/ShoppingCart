@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="4dp"
+    android:padding="@dimen/margin_padding_tiny"
     tools:context="com.gavinfinancialgroup.prontoshop.ui.productlist.ProductListFragment">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginTop="0dp"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
-        android:padding="15dp"
+        android:padding="@dimen/margin_padding_normal"
         android:text="@string/no_product_found"
         android:textColor="@color/colorPrimary"
         android:textStyle="italic"
