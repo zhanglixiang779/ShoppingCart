@@ -108,7 +108,7 @@ public class Transaction {
         String serializedLineItems = getJsonLineItems();
         List<LineItem> result = gson.<ArrayList<LineItem>>fromJson(serializedLineItems,
                 new TypeToken<ArrayList<LineItem>>(){}.getType());
-        return lineItems;
+        return result;
     }
 
     public void setLineItems(List<LineItem> lineItems) {
